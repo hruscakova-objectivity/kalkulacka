@@ -6,23 +6,28 @@ createObjectsForVyplne= ((initialId, value) => {
     for (i=initialId; i < value;i++){
         let objectVypln = {
             id: `ID ${i+1}`,
-            sirka: "",
-            vyska: "",
-            plocha: "",
-            ostenie: "",
-            nadprazie: "",
-            parapet: "",
-            hlbkaOstenia: ""
-        }
-    listVyplni.push(objectVypln);
-        };
-    });
+            Šírka: "",
+            Výška: "",
+            Plocha: "",
+            Ostenie: "",
+            Nadpražie: "",
+            Parapet: "",
+            'Hĺbka ostenia': ""};
+        let individualStats = {
+            id: `ID ${i+1}`,
+            plochaVyplne: ""
+            }
+        
+    listVyplni.push(objectVypln); }});
 
 onChangeIndividualnaVypln= (value, id, name) => {
     console.log(value, id, name);
     var element = listVyplni.find(x => x.id === id);
+    value = parseInt(value);
     element[name] = value;
+    vypocetVyplne = () => {
 
+    }
 }
 
     createInputFields = (listVyplni) => {
@@ -31,7 +36,7 @@ onChangeIndividualnaVypln= (value, id, name) => {
             var h3 = document.createElement("h3");
             var div = document.createElement("div");
             var hr = document.createElement("hr");
-            h3.innerText = `Vypln c.${element.id}`;
+            h3.innerText = `Výplň č.${element.id}`;
             divVsetkyVyplne.appendChild(div);
             div.appendChild(h3);
             div.appendChild(hr); 
@@ -42,6 +47,7 @@ onChangeIndividualnaVypln= (value, id, name) => {
                 var br = document.createElement("br");
                     label.innerText = vyplnProperty;
                     input.type = "number";
+                    input.min = "0";
                     input.setAttribute("onchange", "onChangeIndividualnaVypln(value, id, name)"); 
                     input.setAttribute("id", element.id);    
                     input.setAttribute("name", vyplnProperty); 
@@ -100,8 +106,5 @@ onChangePocetVyplni = (value, oldValue) => {
     }
 
     }
-
-
-
 
 

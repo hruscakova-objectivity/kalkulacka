@@ -2,21 +2,20 @@
 <html>
   <head>
     <title>Technical calculation</title>
-    <html lang="en-US"></html>
+    <html lang="cz" xml:lang="sk"></html>
     <link href="./style.css" rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&amp;subset=latin-ext" rel="stylesheet" type="text/css">
 <script src="./script.js"></script>
   </head>
   <body>
       <div>
         <form>
-          
-          <label> Celkova plocha fasady v m2 </label> 
+          <meta http-equiv="content-type" content="text/html; charset=utf-8">
+          <label> Celková plocha fasády v m2 </label> 
           <input id="celkovaPlochaFasady" type="number"> <br> 
-          <label> Hrubka izolantu fasady </label> 
+          <label> Hrúbka izolantu fasády </label> 
           <input id="hrubkaIzolantuFasady" type="number"> <br> 
-          <label> Pocet vyplni </label>  
+          <label> Počet výplní </label>  
           <input id="pocetVyplni" type="number" min="0" value="0" onfocus="this.oldvalue = this.value;" 
           onchange="onChangePocetVyplni(value, oldvalue); this.oldvalue = this.value;"> <br> 
         </form>
